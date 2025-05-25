@@ -87,10 +87,10 @@ const navigation: NavigationItem[] = [
   },
 
   {
-    text: "Sign Up",
+    text: "Users",
     hide: false,
     nav: {
-      to: routes.usersignup,
+      to: routes.user,
     },
   },
 ];

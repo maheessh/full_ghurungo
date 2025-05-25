@@ -1,7 +1,6 @@
 import { Route, Routes as Switch, Navigate } from "react-router-dom";
 import { NotFoundPage } from "../pages/not-found";
 import { useUser } from "../authentication/use-auth";
-import { UserPage } from "../pages/user-page/user-page";
 import { PageWrapper } from "../components/page-wrapper/page-wrapper";
 import { routes } from ".";
 import Events from "../pages/events-page/events";
@@ -21,6 +20,7 @@ import LandingPage from "../pages/landing-page/landing-page";
 import MemberDashboard from "../pages/organization-member/memberdashboard";
 import ReviewsPage from "../pages/review-page/review";
 import ReviewsDashboard from "../pages/review-page/review-dashboard";
+import Users from "../pages/user-page/user-page";
 export const Routes = () => {
   const user = useUser();
   return (
@@ -31,7 +31,7 @@ export const Routes = () => {
           {/* When path === / render LandingPage */}
           <Route path={routes.home} element={<LandingPage />} />
           {/* When path === /iser render UserPage */}
-          <Route path={routes.user} element={<UserPage />} />
+          <Route path={routes.user} element={<Users />} />
           <Route path={routes.usersignup} element={<UserSignUp />} />
           <Route path={routes.login} element={<LoginPage fetchCurrentUser={function (): void {
             throw new Error("Function not implemented.");
